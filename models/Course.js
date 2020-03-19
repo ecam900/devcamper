@@ -34,7 +34,7 @@ const CourseSchema = new mongoose.Schema({
 
   // This is added because Courses are related to Bootcamps. Every course has to have a bootcamp.
   bootcamp: {
-    type: moongose.Schema.ObjectId,
+    type: mongoose.Schema.ObjectId,
     ref: 'Bootcamp',
     required: true
   }
