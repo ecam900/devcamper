@@ -11,7 +11,7 @@ exports.getCourses = asyncHandler(async (req, res, next) => {
 
   if (req.params.bootcampId) {
     query = Course.find({
-      bootcamp: req.params.id.bootcampId
+      bootcamp: req.params.bootcampId
     });
   } else {
     query = Course.find();
