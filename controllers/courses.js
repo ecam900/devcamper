@@ -75,7 +75,7 @@ exports.addCourse = asyncHandler(async (req, res, next) => {
 // @access  Private
 exports.updateCourse = asyncHandler(async (req, res, next) => {
 
-  let course = await Bootcamp.findById(req.params.id);
+  let course = await Course.findById(req.params.id);
 
   if (!course) {
     return next(new ErrorResponse(`No course with the id of ${req.params.id}`), 404)
