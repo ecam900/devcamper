@@ -3,7 +3,8 @@ const {
   getCourses,
   getCourse,
   addCourse,
-  updateCourse
+  updateCourse,
+  deleteCourse
 } = require('../controllers/courses');
 
 const router = express.Router({
@@ -11,6 +12,6 @@ const router = express.Router({
 });
 
 router.route('/').get(getCourses).post(addCourse);
-router.route('/:id').get(getCourse).put(updateCourse);
+router.route('/:id').get(getCourse).put(updateCourse).delete(deleteCourse);
 
 module.exports = router;
